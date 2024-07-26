@@ -2,6 +2,7 @@
     font-family: Arial, sans-serif;
     margin: 0;
     border: border-box;
+    position: relative; /* Add relative positioning to the body */
 }
 /* notice bar S */
 .notice-bar{
@@ -112,10 +113,10 @@
 /* header E */
 /* media S */
 .pht {
-    height: 500px; /* Set a fixed height for the container */
-    overflow: hidden; /* Ensure that overflow is hidden */
+    height: 500px;
+    overflow: hidden;
+    position: relative; /* Add relative positioning to the .pht container */
 }
-
 .pht img {
     width: 100%; /* Make sure the image takes up the entire width of its container */
     height: 100%; /* Make sure the image takes up the entire height of its container */
@@ -124,13 +125,14 @@
 
 #prevButton,
 #nextButton {
-    position: absolute; /* Position the buttons relative to the container */
+    position:absolute; /* Position the buttons relative to the container */
     top: 55%; /* Position the buttons vertically centered */
     transform: translateY(-50%); /* Adjust vertical position */
     padding: 10px; /* Add padding to the buttons */
     background-color: rgba(255, 255, 255, 0.5); /* Add background color */
     border: none; /* Remove border */
     cursor: pointer; /* Change cursor to pointer */
+    z-index: 10;
 }
 
 #prevButton {
@@ -142,7 +144,27 @@
 }
 
 
+.container {
+    position: relative;
+    width: fit-content;
+}
 
+.translucent-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+    z-index: 2; /* Ensure it's above the image */
+}
+
+.content-card {
+    position: relative;
+    z-index: 1; /* Ensure the image is below the translucent box */
+    padding: 20px;
+    background-color: #f00; /* Example background, replace or remove this if using an image */
+}
 
 footer {
     color:azure;
