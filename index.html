@@ -5,83 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My School</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script src="app.js" defer></script> <!-- Use defer to load JS after HTML parsing -->
 </head>
 <body>
     <header>
-        <!-- Notice bar Starts -->
+        <!-- Notice Bar Starts -->
         <div class="notice-bar">
             <marquee direction="right">"Admission open 2024-25"</marquee>
         </div>
-         <!-- Notice bar ends -->
+        <!-- Notice Bar Ends -->
 
-         <!-- Assuming the sidebar is part of the navbar -->
-           <div class="nav-content">
-             <div class="nav-element">
-               <ul>
-             <!-- Existing menu items -->
-                <li><a href="login.html">Login/Register</a></li>
-               </ul>
-             </div>
-           </div>
-           <!-- sidebar ends here -->
-
-
-            <!-- Nvigation bar Starts -->
-         <div class="navbar">
+        <!-- Navigation Bar Starts -->
+        <nav class="navbar">
             <div class="nav-logo">
                 <div class="logo"></div>
             </div>
             <div class="nav-content">
-                <div class="nav-element">
-                    <ul>
+                <ul>
                     <li><a href="#home">Home</a></li>
                     <li class="dropdown"><a href="#about" class="dropbtn">About Us</a>
-                    <div class="dropdown-content">
-                        <a href="#">Facilities</a>
-                        <a href="#mission">Mission</a>
-                        <a href="#vision">Vision</a>
-                      </div>
+                        <div class="dropdown-content">
+                            <a href="#facilities">Facilities</a>
+                            <a href="#mission">Mission</a>
+                            <a href="#vision">Vision</a>
+                        </div>
                     </li>
-                      <li class="dropdown"><a href="#founder" class="dropbtn">School Founders</a>
-                    <div class="dropdown-content">
-                        <a href="#director">Director's Message</a>
-                        <a href="#principal">Principal's Message </a>
-                    </div>
+                    <li class="dropdown"><a href="#founder" class="dropbtn">School Founders</a>
+                        <div class="dropdown-content">
+                            <a href="#director">Director's Message</a>
+                            <a href="#principal">Principal's Message</a>
+                        </div>
                     </li>
                     <li><a href="#event">Events</a></li>
                     <li><a href="#admissions">Admissions</a></li>
                     <li><a href="#career">Careers</a></li>
                     <li><a href="#contact">Contact Us</a></li>
+                    <li><div class="login-button"><a href="login.html">Login/Register</a></div></li>
                 </ul>
-                </div>
             </div>
-        </div>
-        <!-- Nvigation bar Starts -->
+        </nav>
+        <!-- Navigation Bar Ends -->
     </header>
 
-    <div class="pht">
-        <img src="media\IMG20230804112749.jpg" alt="" width="100%">
-        <img src="media\WhatsApp Image 2024-03-03 at 20.35.03_001584e1.jpg" alt="" width="100%">
-        <img src="media\school image.png" alt="" width="100%">
-        <img src="media\WhatsApp Image 2023-03-09 at 23.45.14.jpg" alt="" width="100%">
-        <img src="media\WhatsApp Image 2023-07-28 at 13.32.21.jpg" alt="" width="100%">
-        <img src="media\WhatsApp Image 2024-03-03 at 20.35.03_001584e1.jpg" alt="" width="100%">
-        <button id="prevButton">Previous</button>
-    <button id="nextButton">Next</button>
-    </div>
-
-    <div class="container">
-        <div class="translucent-box"></div>
-        <div class="content-card">
-            hello 
+    <main>
+        <!-- Image Carousel Starts -->
+        <div class="carousel">
+            <img src="media/IMG20230804112749.jpg" alt="School Image 1">
+            <img src="media/WhatsApp Image 2024-03-03 at 20.35.03_001584e1.jpg" alt="School Image 2">
+            <img src="media/school image.png" alt="School Image 3">
+            <img src="media/WhatsApp Image 2023-03-09 at 23.45.14.jpg" alt="School Image 4">
+            <img src="media/WhatsApp Image 2023-07-28 at 13.32.21.jpg" alt="School Image 5">
+            <button id="prevButton" aria-label="Previous slide">Previous</button>
+            <button id="nextButton" aria-label="Next slide">Next</button>
         </div>
-    </div>
-    
+        <!-- Image Carousel Ends -->
+
+        <!-- Content Section Starts -->
+        <div class="container">
+            <div class="translucent-box"></div>
+            <div class="content-card">
+                <h2>Welcome to Our School</h2>
+                <p>Your content goes here...</p>
+            </div>
+        </div>
+        <!-- Content Section Ends -->
+    </main>
 
     <footer>
         <p>&copy; 2024 My School. All rights reserved.</p>
     </footer>
-
 </body>
 </html>

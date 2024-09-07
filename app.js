@@ -1,6 +1,6 @@
   // JavaScript code
   document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll('.pht img');
+    const images = document.querySelectorAll('.carousel img');
     let currentIndex = 0;
 
     function showImage(index) {
